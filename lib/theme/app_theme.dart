@@ -74,7 +74,7 @@ class AppTheme {
         elevation: 0,
       ),
       cardTheme: CardThemeData(
-        elevation: 20,
+        elevation: 1,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
