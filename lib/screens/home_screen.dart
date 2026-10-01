@@ -24,7 +24,7 @@ class HomeScreen extends GetView<PlacesController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ExploraEC'),
+        title: Obx(() => Text('ExploraEC (${controller.total})')),
         actions: [
           // TODO(sesion-04): OPCIONAL — descomenta el bloque de abajo (Paso 6B — idioma). No borres nada.
           // Por qué: `Get.updateLocale` cambia el idioma activo y reconstruye

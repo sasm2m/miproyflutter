@@ -22,6 +22,11 @@ class PlacesController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    ever(estado, (EstadoCarga e) {
+      if (e == EstadoCarga.error) {
+        Get.snackbar('Error', mensajeError.value);
+      }
+    });
     cargarLugares();
   }
 
@@ -96,4 +101,6 @@ class PlacesController extends GetxController {
       favoritos.add(lugar);
     }
   }
+  /// Estado derivado: se calcula a partir de `lugares`, no se guarda aparte.
+  int get total => lugares.length;
 }
